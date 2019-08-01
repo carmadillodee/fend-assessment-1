@@ -1,0 +1,309 @@
+/*main container for flex*
+TODO: go back to flexbox lesson & check css foundation*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+/*Making sure images scale responsively in containers*/
+img {
+  max-width: 100%;
+
+}
+
+/*container for flexbox*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+
+
+/*text formatting starts here*/
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+
+}
+
+
+.header-title {
+  text-align: center;
+  width: 100%;
+
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+
+}
+
+
+h1 {
+  font-family: "Neucha", "arial", sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+
+}
+
+/* I"ve used Arial as my fallback for the Header font - Google Fonts suggests cursive,
+but a lot of default cursive fonts are in my opinion, really difficult to read*/
+
+
+h2 {
+  font-family: "Neucha", "arial", sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  padding-top: 0.7em;
+  padding-bottom: 0.05em;
+
+}
+
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-bottom: 0.25em;
+
+}
+
+h5 {
+  margin: 1em 0;
+}
+
+
+h3 {
+  font-weight: lighter;
+
+}
+
+p {
+  font-size: 20px;
+
+}
+
+
+/* TODO:link styling-- remove underlines- hover must go AFTER other two. Active last.*/
+
+a:link {
+ color: #6cf;
+ text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+ color: #6cf;
+ text-decoration: none;
+}
+
+a:hover {
+  color: #efd758;
+  text-decoration: underline;
+}
+
+
+/* horizontal rule styling*/
+
+hr{
+  border: 0;
+  height: 4px;
+  width: 100%;
+
+}
+
+
+.yellow-divider {
+  background-color: #efd758;
+
+}
+
+
+.blue-divider {
+  background-color: #6cf;
+
+}
+
+
+.pink-divider {
+  background-color: #f9f;
+
+}
+
+
+/*Divs for title and logo*/
+
+.brand-header {
+  width: 100%;
+
+}
+
+
+.logo {
+  width: 100%;
+  align-content: center;
+
+}
+
+
+/*hero image div- bg colour is so something displays to supplement layout if no image*/
+.hero-image {
+  background: #6cf;
+  max-width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+}
+
+/* introduction section*/
+.introduction {
+  padding: 0 10px;
+}
+
+
+.introduction-container {
+  width: 100%;
+}
+
+
+.page-footer {
+  height: 100px;
+  width: 100%;
+
+}
+
+/* Feature column section*/
+.feature-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px 10px 10px;
+  width: 100%;
+
+}
+
+
+.feature-title {
+  width: 100%;
+  text-align: center;
+
+}
+
+.feature-pic {
+  max-width: 100%;
+}
+
+
+ .feature-text {
+   padding: 10px 30px 10px;
+
+ }
+
+/*footer*/
+.social-footer {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+
+}
+
+
+/* Styling for the Image Attributions to control styling @ different sizes*/
+.image-credits p {
+  font-size: 15px;
+
+  }
+
+
+.social-icons {
+  height: 50px;
+
+}
+
+
+/*Media Queries!*/
+/* TO DO: Add more minor breakpoints*/
+/* Breakpoint 1 - one to three featured columns*/
+
+/*Breakpoint 1- adjusting margins for larger phones/small tablets*/
+@media screen and (min-width: 450px) {
+  .introduction p,
+  .image-credits p{
+    margin-left: 10%;
+    margin-right: 10%;
+
+  }
+
+  hr {
+  height: 2px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .feature {
+  width: 30%;
+  margin: 0 10px 0;
+  max-width: 100%;
+
+  }
+
+
+  .feature-columns {
+    justify-content: space-around;
+
+  }
+
+
+  .logo {
+    width: 20%;
+
+  }
+
+
+  .brand-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 20px 10px;
+
+  }
+
+
+  .header-title {
+    text-align: right;
+    width: 80%;
+    justify-content: flex-end;
+
+  }
+
+
+  p {
+    font-size: 15px;
+
+  }
+
+}
+
+
+/* Breakpoint 3 - Maxmimum width for container + layout readjustment on logo heade*/
+@media screen and (min-width: 800px) {
+.container {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  }
+
+  .social-icons {
+    padding: 5px;
+  }
+}
